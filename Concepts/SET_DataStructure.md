@@ -20,6 +20,7 @@ Set    →  {1, 2, 3}             (no duplicates,     O(1) lookup)
 ## ⚙️ All Methods — JavaScript `Set`
 
 ### Creating a Set
+
 ```js
 const s = new Set();              // empty set
 const s = new Set([1, 2, 3, 2]); // from array → {1, 2, 3}  (2 is deduplicated)
@@ -48,6 +49,7 @@ const s = new Set([1, 2, 3, 2]); // from array → {1, 2, 3}  (2 is deduplicated
 | `s.entries()` | Iterator of `[value, value]` pairs |
 
 ### Code Examples
+
 ```js
 const s = new Set();
 
@@ -80,6 +82,7 @@ const arr2 = Array.from(fruits);  // same thing
 ## ⚙️ All Methods — Python `set`
 
 ### Creating a Set
+
 ```python
 s = set()               # empty set  ← must use set(), NOT {} (that's a dict!)
 s = {1, 2, 3}           # set literal
@@ -124,6 +127,7 @@ a ^ b   # {1, 2, 4, 5}      — symmetric difference
 ## 🧠 Core Patterns a Set Solves
 
 ### Pattern 1 — "Have I Seen This Before?" (Duplicate Detection)
+
 ```js
 // Detect any repeated element in O(n)
 const seen = new Set();
@@ -138,6 +142,7 @@ return false;
 ---
 
 ### Pattern 2 — De-duplication
+
 ```js
 // Remove all duplicates from an array
 const unique = [...new Set(arr)];
@@ -147,6 +152,7 @@ const unique = [...new Set(arr)];
 ---
 
 ### Pattern 3 — Complement / Existence Check
+
 ```js
 // Instead of searching the full array (O(n)), load into a Set, then check O(1)
 const numSet = new Set(nums);
@@ -159,6 +165,7 @@ for (const n of nums) {
 ---
 
 ### Pattern 4 — Streak / Sequence Building
+
 ```js
 // Only start a sequence from its leftmost number
 const s = new Set(nums);
@@ -175,6 +182,7 @@ for (const n of s) {
 ---
 
 ### Pattern 5 — Visited Tracking (Graph / Cycle)
+
 ```js
 const visited = new Set();
 function dfs(node) {
@@ -188,6 +196,7 @@ function dfs(node) {
 ---
 
 ### Pattern 6 — Set Intersection / Union
+
 ```python
 a = set(nums1)
 b = set(nums2)
@@ -259,12 +268,14 @@ return list(a & b)   # common elements
 ## ⚠️ Common Mistakes & Gotchas
 
 ### 1. Empty Set in Python
+
 ```python
 s = {}    # ❌ This is a DICT, not a set!
 s = set() # ✅ Correct empty set
 ```
 
 ### 2. Set is Unordered
+
 ```js
 const s = new Set([3, 1, 2]);
 [...s]  // [3, 1, 2]  ← insertion order is preserved in JS
@@ -272,6 +283,7 @@ const s = new Set([3, 1, 2]);
 ```
 
 ### 3. Objects / Arrays are NOT deduplicated by value
+
 ```js
 const s = new Set();
 s.add([1, 2]);
@@ -281,6 +293,7 @@ s.size;  // 2 ← two different object references!
 ```
 
 ### 4. Set vs Map
+
 | Need | Use |
 |---|---|
 | Track existence / uniqueness | **Set** |

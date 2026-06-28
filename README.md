@@ -33,6 +33,7 @@
 ```
 
 **Examples:**
+
 - `1_TwoSum.py`
 - `206_ReverseLinkedList.java`
 - `53_MaximumSubarray.cpp`
@@ -42,6 +43,7 @@
 ## ✅ Solution Template
 
 Each file follows this structure:
+
 1. **Problem statement** (brief)
 2. **Approach** (Brute Force → Optimal)
 3. **Clean, commented code**
@@ -61,6 +63,7 @@ Each file follows this structure:
 ---
 
 ## 🔗 Resources
+
 - [LeetCode](https://leetcode.com)
 - [NeetCode Roadmap](https://neetcode.io/roadmap)
 - [Striver's A2Z Sheet](https://takeuforward.org/strivers-a2z-dsa-course)
